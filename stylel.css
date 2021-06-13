@@ -1,0 +1,371 @@
+/*---------------------------------------------------------------------
+* Template Name    : Finix | Responsive Bootstrap 5 Personal Template
+* Author           : SRBThemes
+* Version          : 1.0.0
+* Created          : June 2021
+* File Description : Main css file of the template
+* Designer         : Developer Naimul
+*----------------------------------------------------------------------
+*/
+
+/*********************************
+    1.BASIC
+    2.HELPER
+    3.NAVBAR
+    4.SLIDER
+    5.ABOUT 
+    6.SERVICES
+    7.CLIENT
+    8.WORK
+    9.CONTACT
+    10.FOOTER
+    11.RESPONSIVE
+**********************************/
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@import url('');
+
+/*================================
+             1.BASIC
+==================================
+*/
+
+body,
+span,
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Rubik', sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+button,
+button:focus,
+input:focus {
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+::selection {
+    background: rgba(166, 175, 189, 0.3);
+}
+
+::-moz-selection {
+    background: rgba(166, 175, 189, 0.3);
+}
+
+/*================================
+             2.HELPER
+==================================
+*/
+.custom-nav .container-fluid,
+.slider-section .container-fluid {
+    max-width: 1300px;
+}
+
+/***** ANIMETED BUTTON ******/
+.btn-finix {
+    position: relative;
+    padding: 10px 40px;
+    display: inline-block;
+    background: #e73c3e;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-finix:hover {
+    color: #fff;
+}
+
+.btn-finix span {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%,-50%);
+    border-radius: 4px;
+    background: #111111;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.btn-finix:hover span {
+    width: 350px;
+    height: 350px;
+}
+
+/****** DEFULT BUTTON */
+body .btn-primary {
+    background: #e73c3e !important;
+    border: transparent !important;
+    border-radius: 5px;
+    padding: 10px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+body .btn-primary::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: #111;
+    border-radius: 5px;
+    z-index: -1;
+    transition: 0.4s;
+}
+body .btn-primary:hover::after{
+    width: 100%;
+}
+body .btn-primary::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #111;
+    border-radius: 5px;
+    z-index: -1;
+    transition: 0.4s;
+}
+body .btn-primary:hover:before {
+    width: 100%;
+}
+
+
+/*================================
+             3.NAVBAR
+==================================
+*/
+.navbar-brand img {
+    width: 150px !important;
+}
+
+/****** MENU ******/
+ul.main-header-menu li {
+    list-style: none;
+}
+
+ul.main-header-menu li a.finix-activ-menu {
+    color: #e73c3e;
+}
+
+ul.main-header-menu li a {
+    color: #111111;
+    padding: 27px 17px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all .4s ease-in-out;
+}
+
+ul.main-header-menu li:hover > a{
+    color: #e73c3e;
+}
+
+ul.main-header-menu li a i{
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+/****** DROPDOWN MENU 1 ******/
+ul.main-header-menu li {
+    position: relative;
+}
+
+ul.main-header-menu li ul {
+    position: absolute;
+    width: 220px;
+    top: 100%;
+    left: 19px;
+    background: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    transform: translateY(35px);
+}
+
+ul.main-header-menu li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(18px);
+}
+
+ul.main-header-menu li ul li a {
+    padding: 9px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all .3s ease-in-out;
+    display: block;
+}
+
+ul.main-header-menu li ul li a:hover{
+    letter-spacing: 2px;
+}
+
+/****** DROPDOWN MENU 2 ******/
+ul.main-header-menu li ul li {
+    position: relative;
+}
+
+ul.main-header-menu li ul li ul {
+	position: absolute;
+	width: 220px;
+	top: -15px;
+	left: -220px;
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 0;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    transform: translateY(35px);
+}
+
+ul.main-header-menu li ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(18px);
+}
+
+ul.main-header-menu li ul li a span {
+    float: right;
+}
+
+
+/****** HEADER FORM ******/
+.header-search {
+    width: 50px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    margin-right: 24px;
+}
+
+.header-search span {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.header-call {
+    width: 200px;
+}
+
+.header-call-icon {
+    float: left;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.header-call-icon span i{ 
+    font-size: 33px;
+    color: #e73c3e;
+    transform: rotate(-50deg);
+    margin-top: 7px;
+}
+
+.header-call-number span {
+    color: #696063;
+}
+
+.header-call .header-call-number a {
+    color: #111111;
+    font-size: 17px;
+}
+
+/*================================
+             4.SLIDER
+==================================
+*/
+.slider-section {
+    background: url(https://i.ibb.co/sm5Bb2m/main-banner2.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.slider-desc {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider-content h6 {
+    color: #e73c3e;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.slider-content h1 {
+    font-size: 60px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.slider-content p{
+    font-weight: 400;
+    color: #606060;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.header-social {
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+}
+
+.header-social ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.header-social ul li span {
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 50px;
+    position: relative;
+}
+
+.header-social ul li span::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background: #111;
+    left: 115%;
+    top: 50%;
+}
+
+.header-social ul li a {
+    display: inline-block;
+    color: #111;
+    font-size: 18px;
+    margin: 0 14px;
+}
+
+
